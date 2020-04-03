@@ -1,9 +1,10 @@
-funcion greet(fn) {
-  console.log(fn());
-}
+// updating objects
+const info = { name: "sachin" };
+const muttate = Object.assign({}, info, { name: "Dhoni" }, { role: "batsman" });
+console.log(muttate);
 
-function sayHello(){
-  return funcion() {
-    return "hello world"
-  };
-}
+// speard operator
+
+const bioData = { age: 45, role: "batsman" };
+const update = { ...bioData, name: "virat" };
+console.log(update);
