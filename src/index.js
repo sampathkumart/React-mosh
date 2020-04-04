@@ -1,10 +1,17 @@
-// updating objects
-const info = { name: "sachin" };
-const muttate = Object.assign({}, info, { name: "Dhoni" }, { role: "batsman" });
-console.log(muttate);
+const runs = [15, 19, 18, 52];
 
-// speard operator
+//adding
 
-const bioData = { age: 45, role: "batsman" };
-const update = { ...bioData, name: "virat" };
-console.log(update);
+const index = runs.indexOf(18);
+const add = [...runs.slice(0, index), 99, ...runs.slice(index)];
+console.log(add);
+
+// remove
+
+const removed = runs.filter(r => r !== 52);
+console.log(removed);
+
+// update
+
+const updated = runs.map(s => (s === 19 ? 88 : s));
+console.log(updated);
